@@ -55,8 +55,8 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.CardView
         public CardViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            tickImage = itemView.findViewById(R.id.select);
-            subjectNames = itemView.findViewById(R.id.english);
+//            tickImage = itemView.findViewById(R.id.select);
+//            subjectNames = itemView.findViewById(R.id.english);
 
         }
     }

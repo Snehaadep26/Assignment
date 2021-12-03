@@ -7,94 +7,100 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bottomsheetdesign"
+    android:backgroundTint="#FFFFFF"
+    android:foregroundTint="@color/white"
     android:orientation="vertical"
     android:padding="10dp">
 
-    <TextView
-        android:id="@+id/chemistry3"
+    <CheckBox
+        android:id="@+id/chkEng"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chemistry"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/chemistry2"
-        app:layout_constraintTop_toBottomOf="@+id/chemistry2"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/chemistry2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mathematics"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/chemistry"
-        app:layout_constraintTop_toBottomOf="@+id/chemistry" />
-
-    <ImageView
-        android:id="@+id/select3"
-        android:layout_width="30dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/select" />
-
-    <ImageView
-        android:id="@+id/select4"
-        android:layout_width="24dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="92dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/select" />
-
-    <ImageView
-        android:id="@+id/select2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/select4"
-        app:srcCompat="@drawable/select" />
-
-    <ImageView
-        android:id="@+id/select"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/select" />
-
-    <TextView
-        android:id="@+id/english"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:text="English"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/select"
-        app:layout_constraintStart_toStartOf="@+id/chemistry"
-        app:layout_constraintTop_toTopOf="@+id/select" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/chemistry"
+    <CheckBox
+        android:id="@+id/chkMat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Mathematics"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkEng" />
+
+    <CheckBox
+        android:id="@+id/chkChe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Chemistry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkMat" />
+
+    <CheckBox
+        android:id="@+id/chkBio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Biology"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkChe" />
+
+    <CheckBox
+        android:id="@+id/chkPhy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:text="Physics"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/english"
-        tools:layout_editor_absoluteX="97dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkBio" />
 
+    <CheckBox
+        android:id="@+id/chkEng2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="English II"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkPhy" />
 
+    <CheckBox
+        android:id="@+id/chkGeo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Geography"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkEng2" />
+
+    <CheckBox
+        android:id="@+id/chkCvs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Civics"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkGeo" />
+
+    <CheckBox
+        android:id="@+id/chkHis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="History"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkCvs" />
+
+    <CheckBox
+        android:id="@+id/chkSocSci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:backgroundTint="#594099"
+        android:buttonTint="#594099"
+        android:text="Social Science"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkHis" />
 </androidx.constraintlayout.widget.ConstraintLayout>

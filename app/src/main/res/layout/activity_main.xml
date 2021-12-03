@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
+
+
 <LinearLayout
 
 
@@ -14,13 +16,16 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
+    <include
+        layout="@layout/toolbar"/>
+
+   <!-- <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:title="Todays Activity">
 
-    </androidx.appcompat.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>-->
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tablayout"
