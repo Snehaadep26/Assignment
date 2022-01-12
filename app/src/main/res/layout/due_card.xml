@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/hello"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardCornerRadius="10dp"
@@ -15,12 +16,12 @@
 
         <ImageView
             android:id="@+id/subjectImage"
+            style="@style/Base.CardView"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             app:cardCornerRadius="10dp"
-            style="@style/Base.CardView"
 
             app:cardElevation="15dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,55 +43,28 @@
 
         <TextView
             android:id="@+id/Mathematics"
-            android:layout_width="96dp"
-            android:layout_height="27dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
 
-            android:layout_marginEnd="5dp"
-            android:text="Mathematics"
             android:textSize="16dp"
             app:layout_constraintBottom_toTopOf="@+id/objective_textView"
-            app:layout_constraintEnd_toStartOf="@+id/dot1"
             app:layout_constraintStart_toStartOf="@+id/WeekTwoAssignment_tv"
             app:layout_constraintTop_toBottomOf="@+id/WeekTwoAssignment_tv" />
 
 
-        <TextView
-            android:id="@+id/dot1"
-            android:layout_width="20dp"
-            android:layout_height="26dp"
-            android:text=" \u25CF "
-            android:layout_marginEnd="0dp"
-            app:layout_constraintBottom_toBottomOf="@+id/Teacher_name_textView"
-            app:layout_constraintEnd_toStartOf="@+id/Teacher_name_textView"
-            app:layout_constraintStart_toEndOf="@+id/Mathematics"
-            app:layout_constraintTop_toTopOf="@+id/Teacher_name_textView"
-            app:layout_constraintVertical_bias="0.333" />
-
-        <TextView
-
-            android:id="@+id/Teacher_name_textView"
-            android:layout_width="74dp"
-            android:layout_height="29dp"
-            android:layout_marginStart="5dp"
-            android:text="Teacher's name"
-            app:layout_constraintBottom_toBottomOf="@+id/Mathematics"
-            app:layout_constraintStart_toEndOf="@+id/dot1"
-            app:layout_constraintTop_toTopOf="@+id/Mathematics"
-            app:layout_constraintVertical_bias="0.142" />
-
-
         <Button
-            android:layout_width="78dp"
-            android:layout_height="30dp"
+            android:id="@+id/submitButton"
+            android:layout_width="108dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/custom_button"
             android:text="Submit"
-            android:textSize="10sp"
-            app:layout_constraintBottom_toBottomOf="@+id/Teacher_name_textView"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/hundread_tv"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/Teacher_name_textView"
-            app:layout_constraintTop_toTopOf="@+id/Teacher_name_textView"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.958">
 
         </Button>
 
@@ -99,7 +73,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="objective"
 
             android:textColor="#AEAEAE"
             android:textSize="12sp"
@@ -112,7 +85,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text=" \u25CF "
-
             android:textColor="#AEAEAE"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/objective_textView"
@@ -124,7 +96,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="72Qs"
+            android:text="70Q"
+            app:layout_constraintBottom_toBottomOf="@+id/dot2"
             app:layout_constraintStart_toEndOf="@+id/dot2"
             app:layout_constraintTop_toTopOf="@+id/dot2" />
 
@@ -132,10 +105,11 @@
             android:id="@+id/dot3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="32dp"
             android:text=" \u25CF "
             android:textColor="#AEAEAE"
             android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/seven72_textView"
             app:layout_constraintStart_toEndOf="@+id/seven72_textView"
             app:layout_constraintTop_toTopOf="@+id/seven72_textView" />
 
@@ -144,10 +118,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="100 marks"
-
-            android:textColor="#AEAEAE"
-            android:textSize="12sp"
+            android:text="100@"
+            app:layout_constraintBottom_toBottomOf="@+id/dot3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
             app:layout_constraintStart_toEndOf="@+id/dot3"
             app:layout_constraintTop_toTopOf="@+id/dot3" />
 
@@ -157,11 +131,13 @@
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="12dp"
-
+            android:max="100"
+            android:progressTint="#594099"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dot2"
             tools:ignore="InvalidId" />
@@ -172,7 +148,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="progress"
+            android:text="Progress"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/bar"
             app:layout_constraintTop_toBottomOf="@+id/bar" />
@@ -182,7 +158,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="100%"
+            android:id="@+id/percentText"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/bar"
             app:layout_constraintTop_toBottomOf="@+id/bar" />

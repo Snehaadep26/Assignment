@@ -31,41 +31,22 @@
         android:id="@+id/tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#E4DBDB"
+        android:background="#FAFAFA"
         app:tabGravity="fill"
         app:tabIndicator="@android:color/holo_orange_light"
         app:tabMode="fixed"
-        tools:ignore="SpeakableTextPresentCheck"></com.google.android.material.tabs.TabLayout>
+        tools:ignore="SpeakableTextPresentCheck">
+
+    </com.google.android.material.tabs.TabLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_sheet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bottom_sheet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-        <Button
-            android:id="@+id/botom_start"
-            android:layout_width="206dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="8dp"
-            android:backgroundTint="#FFFFFF"
-
-            android:drawableRight="@android:drawable/arrow_down_float"
-            android:text="All subject"
-            android:textAlignment="viewStart"
-            android:textColor="@color/black"
-            android:textSize="10dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></Button>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"

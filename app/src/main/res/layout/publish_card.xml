@@ -3,7 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:id="@+id/hello"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,15 +17,15 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/due_date_cl"
 
-            app:cardCornerRadius="15dp"
-            app:cardElevation="15dp"
-
-            android:background="#F6F4FE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:layout_marginStart="16dp"
-            android:textColor="#594099"
             android:layout_marginTop="20dp"
+            android:background="#F6F4FE"
+            android:textColor="#594099"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="15dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -35,83 +39,84 @@
                 android:text="Due date"
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
-                android:textSize="16sp"
-
                 android:textColor="#594099"
+
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/Aug_15_tv"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutForDueDateAndMonth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Aug 15"
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                android:textColor="#594099"
-
-
-                android:textSize="16sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/due_date_tv"
-                app:layout_constraintStart_toStartOf="@+id/due_date_tv"
-                app:layout_constraintTop_toBottomOf="@id/due_date_tv" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/due_date_tv">
+
+                <TextView
+                    android:id="@+id/dueMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:text="AUG"
+                    android:textColor="#594099"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/dueDate"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/dueDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="15"
+                    android:textAllCaps="true"
+                    android:textColor="#594099"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/dueMonth"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/WeekTwoAssignment_tv"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="Week 2 Assignment"
             android:textAlignment="textStart"
             android:textAllCaps="false"
             android:textColor="#191919"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="136dp"
-            android:text="Week 2 Assignment"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/due_date_cl"
             app:layout_constraintTop_toTopOf="@+id/due_date_cl" />
 
         <TextView
-            android:id="@+id/Mathematics"
+            android:id="@+id/subjectName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="7dp"
+
             android:text="Mathematics"
+            app:layout_constraintStart_toEndOf="@+id/due_date_cl"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
 
-            app:layout_constraintStart_toStartOf="@+id/WeekTwoAssignment_tv"
-            app:layout_constraintTop_toBottomOf="@+id/WeekTwoAssignment_tv" />
-
-
-        <TextView
-            android:id="@+id/dot1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text=" \u25CF "
-            app:layout_constraintBottom_toBottomOf="@+id/Teacher_name_textView"
-            app:layout_constraintStart_toEndOf="@+id/Mathematics"
-            app:layout_constraintTop_toTopOf="@+id/Teacher_name_textView" />
 
         <TextView
-
-            android:id="@+id/Teacher_name_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="Teacher's name"
-            app:layout_constraintBottom_toBottomOf="@+id/Mathematics"
-            app:layout_constraintStart_toEndOf="@+id/dot1"
-            app:layout_constraintTop_toTopOf="@+id/Mathematics" />
-
-        <TextView
-            android:id="@+id/objective_textView"
+            android:id="@+id/type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -119,8 +124,8 @@
 
             android:textColor="#AEAEAE"
             android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="@+id/Mathematics"
-            app:layout_constraintTop_toBottomOf="@id/Mathematics" />
+            app:layout_constraintStart_toStartOf="@+id/subjectName"
+            app:layout_constraintTop_toBottomOf="@id/subjectName" />
 
         <TextView
             android:id="@+id/dot2"
@@ -131,12 +136,12 @@
 
             android:textColor="#AEAEAE"
             android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@+id/objective_textView"
-            app:layout_constraintTop_toTopOf="@+id/objective_textView" />
+            app:layout_constraintStart_toEndOf="@+id/type"
+            app:layout_constraintTop_toTopOf="@+id/type" />
 
         <TextView
 
-            android:id="@+id/seven72_textView"
+            android:id="@+id/noOfQues"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -152,11 +157,11 @@
             android:text=" \u25CF "
             android:textColor="#AEAEAE"
             android:textSize="12sp"
-            app:layout_constraintStart_toEndOf="@+id/seven72_textView"
-            app:layout_constraintTop_toTopOf="@+id/seven72_textView" />
+            app:layout_constraintStart_toEndOf="@+id/noOfQues"
+            app:layout_constraintTop_toTopOf="@+id/noOfQues" />
 
         <TextView
-            android:id="@+id/hundread_tv"
+            android:id="@+id/marks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -169,25 +174,27 @@
 
         <ProgressBar
 
+            android:id="@+id/bar"
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="12dp"
-            android:layout_marginStart="16dp"
 
-            android:id="@+id/bar"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dot2"
             tools:ignore="InvalidId" />
-
         <TextView
+            android:id="@+id/progress_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:text="progress"
-            android:id="@+id/progress_textview"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/bar"
             app:layout_constraintTop_toBottomOf="@+id/bar" />
 
@@ -195,9 +202,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="0%"
+            android:layout_marginBottom="8dp"
+            android:text="100%"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/bar"
             app:layout_constraintTop_toBottomOf="@+id/bar" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

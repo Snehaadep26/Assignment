@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--use rotate tag to rotate the drawable-->
+
+
+    <!--shape tag is used to
+        build a shape in XML-->
+<shape android:innerRadiusRatio="3"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <!--set the size of the shape-->
+
+
+        <!--set the color gradients
+            of the shape-->
+        <gradient
+            android:angle="0"
+            android:endColor="#594099"
+            android:startColor="#594099"
+            android:useLevel="false" />
+    </shape>
+

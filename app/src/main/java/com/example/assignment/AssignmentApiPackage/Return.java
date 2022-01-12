@@ -3,140 +3,91 @@ package com.example.assignment.AssignmentApiPackage;
 import java.util.Date;
 
 public class Return {
-
     public int id;
     public String title;
     public Date dueDate;
+    public String status;
     public String type;
     public Date publishDate;
-    public int standardId;
-    public Date createdAt;
-    public String teacherName;
+    public String subjectName;
+    public String subjectIcon;
     public Object assignmentStudentId;
-    public Object status;
     public Object returnedDate;
-    public Object submittedOn;
+    public String teacherName;
     public String noOfQuestions;
+    public String marks;
     public String countAttempted;
-    public boolean newA;
+
+    public Return(int id, String title, Date dueDate, String status, String type, Date publishDate, String subjectName, String subjectIcon, Object assignmentStudentId, Object returnedDate, String teacherName, String noOfQuestions, String marks, String countAttempted) {
+        this.id = id;
+        this.title = title;
+        this.dueDate = dueDate;
+        this.status = status;
+        this.type = type;
+        this.publishDate = publishDate;
+        this.subjectName = subjectName;
+        this.subjectIcon = subjectIcon;
+        this.assignmentStudentId = assignmentStudentId;
+        this.returnedDate = returnedDate;
+        this.teacherName = teacherName;
+        this.noOfQuestions = noOfQuestions;
+        this.marks = marks;
+        this.countAttempted = countAttempted;
+    }
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public Date getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(Date dueDate) {
-        this.dueDate = dueDate;
+    public String getStatus() {
+        return status;
     }
 
     public String getType() {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public Date getPublishDate() {
         return publishDate;
     }
 
-    public void setPublishDate(Date publishDate) {
-        this.publishDate = publishDate;
+    public String getSubjectName() {
+        return subjectName;
     }
 
-    public int getStandardId() {
-        return standardId;
-    }
-
-    public void setStandardId(int standardId) {
-        this.standardId = standardId;
-    }
-
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public String getTeacherName() {
-        return teacherName;
-    }
-
-    public void setTeacherName(String teacherName) {
-        this.teacherName = teacherName;
+    public String getSubjectIcon() {
+        return subjectIcon;
     }
 
     public Object getAssignmentStudentId() {
         return assignmentStudentId;
     }
 
-    public void setAssignmentStudentId(Object assignmentStudentId) {
-        this.assignmentStudentId = assignmentStudentId;
-    }
-
-    public Object getStatus() {
-        return status;
-    }
-
-    public void setStatus(Object status) {
-        this.status = status;
-    }
-
     public Object getReturnedDate() {
         return returnedDate;
     }
 
-    public void setReturnedDate(Object returnedDate) {
-        this.returnedDate = returnedDate;
-    }
-
-    public Object getSubmittedOn() {
-        return submittedOn;
-    }
-
-    public void setSubmittedOn(Object submittedOn) {
-        this.submittedOn = submittedOn;
+    public String getTeacherName() {
+        return teacherName;
     }
 
     public String getNoOfQuestions() {
         return noOfQuestions;
     }
 
-    public void setNoOfQuestions(String noOfQuestions) {
-        this.noOfQuestions = noOfQuestions;
+    public String getMarks() {
+        return marks;
     }
 
     public String getCountAttempted() {
         return countAttempted;
-    }
-
-    public void setCountAttempted(String countAttempted) {
-        this.countAttempted = countAttempted;
-    }
-
-    public boolean isNewA() {
-        return newA;
-    }
-
-    public void setNewA(boolean newA) {
-        this.newA = newA;
     }
 }

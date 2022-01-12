@@ -3,7 +3,7 @@ package com.example.assignment.AssignmentApiPackage;
 import java.util.List;
 
 public class AssignmentDashboardResponse {
-    public List<Subject> subjects;
+    public List<Subjects> subjects;
     public TodaysActivities todaysActivities;
     public List<Summary> summary;
     public int publishedCount;
@@ -11,11 +11,11 @@ public class AssignmentDashboardResponse {
     public int returnedCount;
     public List<AllSubject> allSubjects;
 
-    public List<Subject> getSubjects() {
+    public List<Subjects> getSubjects() {
         return subjects;
     }
 
-    public void setSubjects(List<Subject> subjects) {
+    public void setSubjects(List<Subjects> subjects) {
         this.subjects = subjects;
     }
 

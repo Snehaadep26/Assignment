@@ -4,18 +4,25 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/drawable/bottomsheetdesign.xml" value="0.1388888888888889" />
+        <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/drawable/custom_button.xml" value="0.2203125" />
         <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/drawable/ic_search.xml" value="0.1125" />
         <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/drawable/ic_search_white.xml" value="0.2203125" />
+        <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/drawable/image.xml" value="0.12222222222222222" />
+        <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/drawable/progress.xml" value="0.1685" />
         <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/drawable/select.xml" value="0.2203125" />
         <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/layout/activity_question.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/layout/bottom_sheet.xml" value="0.22" />
-        <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/layout/due_card.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/layout/due_card.xml" value="0.22" />
         <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/layout/due_fragment.xml" value="0.1" />
         <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/layout/publish_card.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/layout/publish_fragment.xml" value="0.18432971014492755" />
+        <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/layout/question_card.xml" value="0.17889492753623187" />
         <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/layout/return_card.xml" value="0.25" />
         <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/layout/return_fragment.xml" value="0.1" />
         <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/layout/subject.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/layout/submit_sheet.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/layout/toolbar.xml" value="0.14402173913043478" />
         <entry key="..\:/Users/Sneha/AndroidStudioProjects/Assignment/app/src/main/res/menu/menu.xml" value="0.25" />
         <entry key="..\:/Users/Yashwanth/AndroidStudioProjects/Assignment/app/src/main/res/drawable/ic_search.xml" value="0.2203125" />
         <entry key="..\:/Users/Yashwanth/AndroidStudioProjects/Assignment/app/src/main/res/drawable/select.xml" value="0.1" />

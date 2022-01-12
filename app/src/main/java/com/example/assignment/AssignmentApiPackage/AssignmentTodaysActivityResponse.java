@@ -11,7 +11,7 @@ public class AssignmentTodaysActivityResponse {
 
     public List<Published> published;
     public List<DueForSubmission> dueForSubmission;
-    public List<Object> returned;
+    public List<Return> returned;
     public List<AllSubject> allSubjects;
 
     public List<Published> getPublished() {
@@ -30,11 +30,11 @@ public class AssignmentTodaysActivityResponse {
         this.dueForSubmission = dueForSubmission;
     }
 
-    public List<Object> getReturned() {
+    public List<Return> getReturned() {
         return returned;
     }
 
-    public void setReturned(List<Object> returned) {
+    public void setReturned(List<Return> returned) {
         this.returned = returned;
     }
 

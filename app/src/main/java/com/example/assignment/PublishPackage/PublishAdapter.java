@@ -1,12 +1,11 @@
 package com.example.assignment.PublishPackage;
 
 
-import android.content.Context;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,41 +17,44 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class PublishAdapter extends RecyclerView.Adapter<PublishAdapter.MyViewHolder> {
+    public class PublishAdapter extends RecyclerView.Adapter<PublishAdapter.MyViewHolder> {
         ArrayList<Published> name;
         ArrayList<Published> publish;
 
-        public PublishAdapter( ArrayList<Published> name)
-        {
+        public PublishAdapter(ArrayList<Published> name) {
 
             this.name = name;
         }
 
 
-
         @Override
         public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View v;
-            v= LayoutInflater.from(parent.getContext()).inflate(R.layout.publish_card,parent,false);
-            MyViewHolder vHolder=new MyViewHolder(v);
+            v = LayoutInflater.from(parent.getContext()).inflate(R.layout.publish_card, parent, false);
+            MyViewHolder vHolder = new MyViewHolder(v);
             return vHolder;
         }
 
         @Override
-        public void onBindViewHolder( @NonNull MyViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
             Published currentPublish = name.get(position);
-            holder.teacherName.setText(currentPublish.getTeacherName());
+            holder.title.setText(currentPublish.getTitle());
+            holder.dueMonth.setText(currentPublish.getDueMonth());
+            holder.dueDate.setText(String.valueOf(currentPublish.getDueDate()));
+            holder.subjectName.setText(currentPublish.getSubjectName());
+            holder.type.setText(currentPublish.getType());
+            holder.noOfQuestions.setText(String.valueOf(currentPublish.getNoOfQuestions()));
+            holder.marks.setText(String.valueOf(currentPublish.getMarks()));
 
         }
 
         @Override
-        public int getItemCount()
-        {
+        public int getItemCount() {
             return name.size();
         }
 
         public Filter getFilter() {
-            return publishFilter ;
+            return publishFilter;
         }
 
         private Filter publishFilter = new Filter() {
@@ -61,16 +63,15 @@ public class PublishAdapter extends RecyclerView.Adapter<PublishAdapter.MyViewHo
 
                 List<Published> filteredList = new ArrayList<>();
 
-                if (constraint == null || constraint.length() == 0){
+                if (constraint == null || constraint.length() == 0) {
                     filteredList.addAll(publish);
-                }
-                else {
+                } else {
                     String filterPattern = constraint.toString().toLowerCase().trim();
-                    for (Published name:publish
+                    for (Published name : publish
                     ) {
-                        if (name.getTeacherName().toLowerCase().contains(filterPattern)){
-                            filteredList.add(name);
-                        }
+//                        if (name.getTeacherName().toLowerCase().contains(filterPattern)){
+//                            filteredList.add(name);
+//                        }
                     }
                 }
                 FilterResults filterResults = new FilterResults();
@@ -82,22 +83,28 @@ public class PublishAdapter extends RecyclerView.Adapter<PublishAdapter.MyViewHo
             protected void publishResults(CharSequence constraint, FilterResults results) {
 
                 name.clear();
-                name.addAll((List)results.values);
+                name.addAll((List) results.values);
                 notifyDataSetChanged();
 
             }
         };
 
 
-        public static class MyViewHolder extends RecyclerView.ViewHolder{
+        public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-            public  TextView teacherName;
+            TextView title,subjectName, type, noOfQuestions, marks,dueMonth,dueDate;
 
             public MyViewHolder(@NonNull View itemView) {
                 super(itemView);
-
-                teacherName=itemView.findViewById(R.id.Teacher_name_textView);
+                title = itemView.findViewById(R.id.title);
+                subjectName = itemView.findViewById(R.id.subjectName);
+                type = itemView.findViewById(R.id.type);
+                noOfQuestions = itemView.findViewById(R.id.noOfQues);
+                marks = itemView.findViewById(R.id.marks);
+                dueMonth = itemView.findViewById(R.id.dueMonth);
+                dueDate = itemView.findViewById(R.id.dueDate);
 
             }
         }
-}
+    }
+

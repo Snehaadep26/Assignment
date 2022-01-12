@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:id="@+id/returnCard"
     android:layout_margin="8dp"
     app:cardCornerRadius="10dp"
     app:cardElevation="5dp">
@@ -46,38 +47,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
 
-            android:layout_marginEnd="8dp"
             android:text="Mathematics"
             android:textSize="16dp"
             app:layout_constraintBottom_toTopOf="@+id/objective_textView"
-            app:layout_constraintEnd_toStartOf="@+id/dot1"
             app:layout_constraintStart_toStartOf="@+id/WeekTwoAssignment_tv"
             app:layout_constraintTop_toBottomOf="@+id/WeekTwoAssignment_tv" />
 
-
-        <TextView
-            android:id="@+id/dot1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="24dp"
-            android:text=" \u25CF "
-            app:layout_constraintBottom_toBottomOf="@+id/Teacher_name_textView"
-            app:layout_constraintEnd_toStartOf="@+id/Teacher_name_textView"
-            app:layout_constraintStart_toEndOf="@+id/Mathematics"
-            app:layout_constraintTop_toTopOf="@+id/Teacher_name_textView" />
-
-        <TextView
-
-            android:id="@+id/Teacher_name_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:text="Teacher's name"
-            app:layout_constraintBottom_toBottomOf="@+id/Mathematics"
-            app:layout_constraintStart_toEndOf="@+id/dot1"
-            app:layout_constraintTop_toTopOf="@+id/Mathematics"
-            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/objective_textView"
@@ -100,6 +75,7 @@
 
             android:textColor="#AEAEAE"
             android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/objective_textView"
             app:layout_constraintStart_toEndOf="@+id/objective_textView"
             app:layout_constraintTop_toTopOf="@+id/objective_textView" />
 
@@ -110,6 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="72Qs"
+            app:layout_constraintBottom_toBottomOf="@+id/dot2"
             app:layout_constraintStart_toEndOf="@+id/dot2"
             app:layout_constraintTop_toTopOf="@+id/dot2" />
 
@@ -133,6 +110,7 @@
 
             android:textColor="#AEAEAE"
             android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/seven72_textView"
             app:layout_constraintStart_toEndOf="@+id/dot3"
             app:layout_constraintTop_toTopOf="@+id/dot3" />
 
@@ -144,9 +122,10 @@
             android:layout_height="12dp"
 
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dot2"
             tools:ignore="InvalidId" />

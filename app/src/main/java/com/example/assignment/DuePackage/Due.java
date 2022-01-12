@@ -1,32 +1,51 @@
 package com.example.assignment.DuePackage;
 
 public class Due {
-    private int subjectImage;
-    private String week;
-    private String subject;
+    private String subjectImage;
+    private String noOfQuestions,marks, subject,type,title;
+    int progress;
+    String perText;
 
-    private  String teacherName;
-
-    public Due(int subjectImage, String week, String subject, String teacherName) {
+    public Due(String subjectImage, String noOfQuestions, String marks, String subject, String type, String title, int progress, String perText) {
         this.subjectImage = subjectImage;
-        this.week = week;
-        this.subject=subject;
-        this.teacherName=teacherName;
+        this.noOfQuestions = noOfQuestions;
+        this.marks = marks;
+        this.subject = subject;
+        this.type = type;
+        this.title=title;
+        this.progress=progress;
+        this.perText=perText;
     }
 
-    public int getImageView() {
+    public String getSubjectImage() {
         return subjectImage;
     }
 
-    public String getWeek() {
-        return week;
+    public String getNoOfQuestions() {
+        return noOfQuestions;
+    }
+
+    public String getMarks() {
+        return marks;
     }
 
     public String getSubject() {
         return subject;
     }
 
-    public String getTeacherName() {
-        return teacherName;
+    public String getType() {
+        return type;
+    }
+    public String getTitle()
+    {
+        return title;
+    }
+    public int getProgress()
+    {
+        return  progress;
+    }
+    public String getPerText()
+    {
+        return perText;
     }
 }
